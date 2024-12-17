@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Main Menu.unity
+    guid: a250f3e8c76df8841805d12299c703eb
+  - enabled: 1
+    path: Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Demo Blend.unity
+    guid: a66e5f1bb7e0e90469c3bcd8ae5c4b2d
   m_configObjects: {}
