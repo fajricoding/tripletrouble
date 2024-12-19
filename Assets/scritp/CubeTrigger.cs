@@ -13,9 +13,15 @@ public class CubeTrigger : MonoBehaviour
     private bool isAnswered = false; // Menandai apakah cube ini sudah dijawab
     private bool isActiveCube = false; // Apakah cube ini yang sedang diaktifkan
 
+    public GameObject sound_salah;
+    public GameObject sound_benar;
+
+
     private void Start()
     {
         textPanel.SetActive(false); // Panel soal tidak aktif saat awal
+        sound_benar.SetActive(false);
+        sound_salah.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -48,11 +54,16 @@ public class CubeTrigger : MonoBehaviour
         {
             gameController.UpdateScore(20); // Tambah skor
             Debug.Log("Jawaban benar!");
+            sound_benar.SetActive(true);
+            
+            
         }
         else
         {
             gameController.UpdateScore(-10); // Kurangi skor
             Debug.Log("Jawaban salah!");
+            sound_salah.SetActive(true);
+            
         }
 
         isAnswered = true; // Tandai cube ini sebagai sudah dijawab
